@@ -1,0 +1,19 @@
+.EducationWrapper{
+    margin-top: 80px;
+}
+.education{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 120px;
+    border-top: 0.5px solid var(--border-color);
+    border-bottom: 0.5px solid var(--border-color);
+    color: var(--text-color);
+}
+h1{
+    margin-bottom: 50px;
+}
+.education small{
+    font-size: 16px;
+}

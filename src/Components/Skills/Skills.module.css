@@ -1,0 +1,48 @@
+/* Skills Wrapper */
+.SkillsWrapper {
+  margin-top: 80px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.skillCard {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.skillCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.skillCard h4 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.skillImage {
+  width: 120px; /* Increased size for better visibility */
+  height: 120px;
+  margin-bottom: 1rem;
+  object-fit: contain; /* Ensures logos with transparent backgrounds are not stretched */
+  background-color: transparent; /* Ensures no background is added */
+  border-radius: 0; /* Makes sure that logos with transparent backgrounds stay intact */
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}

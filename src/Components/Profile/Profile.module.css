@@ -1,0 +1,125 @@
+.ProfileWrapper {
+  min-height: 80vh;
+  width: 360px;
+  padding: 30px;
+  position: fixed; /* Fixed position on larger screens */
+  top: 10%;
+  left: 5%;
+}
+
+.ProfileBox {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 30px; /* Increased padding for larger content area */
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  height: auto; /* Allow height to expand based on content */
+  min-height: 400px; /* Minimum height to ensure the card is sufficiently large */
+}
+
+.ProfileImg {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px; /* Increased margin for more space */
+  border: 5px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ProfileInfo {
+  margin-bottom: 20px;
+}
+
+.ProfileInfo h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.ProfileInfo h3 {
+  margin: 10px 0; /* Increased margin */
+  color: #555;
+}
+
+.ProfileInfo p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.SocialMedia {
+  display: flex;
+  justify-content: center; /* Centers the icons */
+  flex-wrap: wrap; /* Ensures icons wrap to the next line if necessary */
+  margin-bottom: 20px;
+}
+
+.Icon {
+  font-size: 2rem;
+  margin: 0 10px; /* Reduced margin for better fit on smaller screens */
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.Icon:hover {
+  color: #0056b3;
+}
+
+.DownloadCV {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 12px 24px; /* Increased padding */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.DownloadCV:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ProfileWrapper {
+    width: 280px; /* Adjusted width for smaller screens */
+    top: 10px;
+    left: 10px; /* Adjusted positioning */
+    position: relative; /* Change from fixed to relative */
+    margin: 0 auto; /* Center the profile horizontally */
+  }
+
+  .ProfileBox {
+    padding: 20px; /* Adjust padding for smaller screens */
+    min-height: 350px; /* Adjusted minimum height */
+  }
+
+  .ProfileImg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ProfileInfo h1 {
+    font-size: 1.3rem;
+  }
+
+  .ProfileInfo h3 {
+    font-size: 1.1rem;
+  }
+
+  .ProfileInfo p {
+    font-size: 0.9rem;
+  }
+
+  .Icon {
+    font-size: 1.5rem; /* Reduce icon size on smaller screens */
+    margin: 0 8px; /* Reduced margin for better fit */
+  }
+}
