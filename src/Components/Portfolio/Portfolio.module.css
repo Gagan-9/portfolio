@@ -1,50 +1,119 @@
-.PortfolioWrapper{
+/* General Wrapper for Portfolio Section */
+.PortfolioWrapper {
     margin-top: 80px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.portfolioCards{
+/* Portfolio Cards Grid Layout */
+.portfolioCards {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.portfolioCards .card{
-    width: 100%; 
+/* Individual Card Styling */
+.portfolioCards .card {
     position: relative;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-}
-.portfolioCards .card .tags{
-   position: absolute;
-   bottom: -40%;
-   left: 5%;
-   transition:  .6s;
-   display: flex;
-   gap:12px;
-   align-items: 5%;
-   padding: 5px 12px;
+    background: #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.portfolioCards .card:hover .tags{
-    bottom: 5%;
-    background-color: var(--bg-black);
+/* Hover Effects for Card */
+.portfolioCards .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Blur Effect on Card Hover */
+.portfolioCards .card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 0; /* Set z-index to place it behind text */
+}
+
+/* Card Info - Project Name and Links */
+.portfolioCards .cardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    z-index: 1; /* Ensure text appears above the blurred background */
+}
+
+/* Show cardInfo on hover */
+.portfolioCards .card:hover .cardInfo {
+    opacity: 1; /* Make visible on hover */
+}
+
+/* Project Name Styling */
+.portfolioCards .projectName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    flex-grow: 1;
+}
+
+/* Links Styling */
+.portfolioCards .links {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolioCards .links a {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 14px;
     border-radius: 30px;
-    padding: 5px 12px;
- }
-
- .portfolioCards .card:hover .tags span{
-    background-color: var(--bg-black);
-    border-radius: 30px;
-    padding: 5px 12px;
-    color: var(--button-color);
- }
-.portfolioCards .card img{
-   width: 100%;
-   border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media screen and (max-width:500px){
-    .portfolioCards{
-        grid-template-columns: repeat(1,1fr);
+.portfolioCards .links a:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.portfolioCards .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .portfolioCards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .PortfolioWrapper {
+        padding: 0 10px;
     }
 }

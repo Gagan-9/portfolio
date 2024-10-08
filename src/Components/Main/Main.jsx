@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import mainCSS from './Main.module.css'
+import mainCSS from './Main.module.css';
 import { Link } from 'react-router-dom';
 
 function Main() {
     const Darkmode = () => {
         document.querySelector('body').setAttribute('data-theme', 'Dark');
-    }
+    };
 
     const Lightmode = () => {
         document.querySelector('body').setAttribute('data-theme', 'Light');
-    }
+    };
 
     const ThemeHandler = () => {
         if (document.querySelector('body').getAttribute('data-theme') === 'Light') {
@@ -17,10 +17,15 @@ function Main() {
         } else {
             Lightmode();
         }
-    }
+    };
+
     useEffect(() => {
         Lightmode();
     }, []);
+
+    const handleConnectClick = () => {
+        window.open('https://www.linkedin.com/in/gagandeep-kaur-211961224/', '_blank');
+    };
 
     return (
         <>
@@ -37,12 +42,11 @@ function Main() {
                 </ul>
                 <div className={mainCSS.navBtns}>
                     <i className="ri-sun-line" onClick={ThemeHandler}></i>
-                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Let’s Connect</button>
-
+                    <button onClick={handleConnectClick}>Let’s Connect</button>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default Main;

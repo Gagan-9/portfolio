@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 768px) {
     .navbar {
-        left: 10%; 
+        left: 20%; 
     }
 }
 
@@ -94,6 +94,6 @@
         margin: 0 4px; 
     }
     .navbar {
-        left: 5%; 
+        left: 20%; 
     }
 }

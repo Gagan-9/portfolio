@@ -5,10 +5,11 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
-    position: relative; /* To position the floating objects */
-    overflow: hidden; /* Hide objects outside the container */
+    position: relative; 
+    overflow: hidden; 
     color: #333;
     background-color: #f0f0f0;
+    border-radius: 15px;
 }
 
 .ContentWrapper {
