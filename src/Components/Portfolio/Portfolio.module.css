@@ -1,4 +1,4 @@
-/* General Wrapper for Portfolio Section */
+
 .PortfolioWrapper {
     margin-top: 80px;
     padding: 0 20px;
@@ -7,7 +7,6 @@
     margin-right: auto;
 }
 
-/* Portfolio Cards Grid Layout */
 .portfolioCards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -15,7 +14,6 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Individual Card Styling */
 .portfolioCards .card {
     position: relative;
     border-radius: 12px;
@@ -25,13 +23,12 @@
     transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Effects for Card */
+
 .portfolioCards .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Background Blur Effect on Card Hover */
 .portfolioCards .card:hover::before {
     content: '';
     position: absolute;
@@ -41,10 +38,9 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
-    z-index: 0; /* Set z-index to place it behind text */
+    z-index: 0; 
 }
 
-/* Card Info - Project Name and Links */
 .portfolioCards .cardInfo {
     display: flex;
     justify-content: space-between;
@@ -58,17 +54,15 @@
     color: white;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth transition for visibility */
-    z-index: 1; /* Ensure text appears above the blurred background */
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    z-index: 1; 
 }
 
-/* Show cardInfo on hover */
 .portfolioCards .card:hover .cardInfo {
-    opacity: 1; /* Make visible on hover */
+    opacity: 1; 
 }
 
-/* Project Name Styling */
 .portfolioCards .projectName {
     font-size: 18px;
     font-weight: bold;
@@ -76,7 +70,6 @@
     flex-grow: 1;
 }
 
-/* Links Styling */
 .portfolioCards .links {
     display: flex;
     gap: 10px;
@@ -98,7 +91,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Image Styling */
 .portfolioCards .card img {
     width: 100%;
     height: auto;
@@ -106,7 +98,6 @@
     border-radius: 12px 12px 0 0;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .portfolioCards {
         grid-template-columns: 1fr;

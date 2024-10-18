@@ -49,7 +49,6 @@
     color: var(--text-color);
 }
 
-
 @media screen and (max-width: 1400px) {
     .navbar ul li a span {
         display: none;
@@ -63,14 +62,16 @@
     .navbar {
         justify-content: center;
         position: fixed;
-        top: 80%;
-        left: 50%;
+        top: 80%; 
+        left: 30%;
         width: auto; 
         background-color: #e6ebf468;
         padding: 0 10px;
         border-radius: 30px;
         backdrop-filter: blur(8px);
         border: 0.1px solid var(--border-color);
+        z-index: 1000;
+        transform: translateX(-50%);
     }
     #nav_ThemeBtn {
         display: inline-block;
@@ -86,6 +87,7 @@
 @media screen and (max-width: 768px) {
     .navbar {
         left: 20%; 
+        transform: none; 
     }
 }
 
@@ -94,6 +96,7 @@
         margin: 0 4px; 
     }
     .navbar {
-        left: 20%; 
+        left: 20%;
+        z-index: 1000; 
     }
 }
