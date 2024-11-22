@@ -1,0 +1,110 @@
+
+.PortfolioWrapper {
+    margin-top: 80px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolioCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolioCards .card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f0f0f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.portfolioCards .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.portfolioCards .card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 0; 
+}
+
+.portfolioCards .cardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    z-index: 1; 
+}
+
+.portfolioCards .card:hover .cardInfo {
+    opacity: 1; 
+}
+
+.portfolioCards .projectName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    flex-grow: 1;
+}
+
+.portfolioCards .links {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolioCards .links a {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolioCards .links a:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolioCards .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolioCards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .PortfolioWrapper {
+        padding: 0 10px;
+    }
+}

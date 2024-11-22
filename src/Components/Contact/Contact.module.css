@@ -1,0 +1,57 @@
+.ContactWrapper {
+  margin-top: 50px;
+}
+
+.TestimonialWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.Profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.Profile img {
+  height: 200px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.Profile h3 {
+  font-size: 30px;
+}
+
+.Profile h3 span {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.Testimonials {
+  margin-top: 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+}
+
+.Profile h3 span a {
+  color: #0077B5; 
+  text-decoration: none; 
+}
+
+.Profile h3 span a:hover {
+  text-decoration: underline; 
+}
+
+@media screen and (max-width: 500px) {
+  .ContactDetails {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}

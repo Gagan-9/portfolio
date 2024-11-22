@@ -1,0 +1,82 @@
+.AboutWrapper {
+  margin-top: 80px;
+}
+
+.AboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.Intro {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.Section {
+  padding: 25px;
+  background-color: var(--section-background);
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.Section:hover {
+  transform: translateY(-5px);
+}
+
+.SubTitle {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.SkillsList, .HobbiesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.SkillsList li, .HobbiesList li {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.SkillsList li:hover, .HobbiesList li:hover {
+  color: var(--primary-color);
+}
+
+.SkillsList i, .HobbiesList i {
+  font-size: 20px;
+  margin-right: 12px;
+  color: var(--icon-color);
+}
+
+.Section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .AboutWrapper {
+    padding: 30px;
+  }
+
+  .SkillsList, .HobbiesList {
+    grid-template-columns: 1fr;
+  }
+}

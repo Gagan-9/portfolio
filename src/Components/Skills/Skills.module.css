@@ -1,0 +1,76 @@
+/* Skills Wrapper */
+.SkillsWrapper {
+  margin-top: 80px;
+  opacity: 0; /* Initially invisible */
+  animation: fadeIn 1s forwards ease-in-out; /* Fade-in effect */
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.skillCard {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  width: 100%;
+  cursor: pointer; /* Pointer to indicate it's interactive */
+  transform: perspective(1000px) rotateY(0deg); /* For 3D rotation on hover */
+}
+
+.skillCard:hover {
+  transform: translateY(-8px) scale(1.05) rotateY(10deg); /* Adds scale and rotation */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa; /* Slight background change on hover */
+}
+
+.skillCard h4 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  transform: translateY(20px); /* Initial position for text entrance */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth entrance */
+}
+
+.skillCard:hover h4 {
+  transform: translateY(0); /* Move back to normal */
+  opacity: 1; /* Make it visible */
+}
+
+.skillImage {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skillCard:hover .skillImage {
+  transform: rotate(10deg) scale(1.1); /* Slight rotation and scale */
+}
+
+/* Fade-in animation for section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move up slightly */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
