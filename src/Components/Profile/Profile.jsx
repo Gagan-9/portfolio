@@ -18,7 +18,7 @@ function Profile() {
           <a href="https://leetcode.com/Gagank9" className={profileCSS.Icon}><i className="ri-code-line"></i></a>
         </div>
         <a 
-          href="https://drive.google.com/file/d/1s-O-JExVQ8HG4QgHmmuaGxwMFRiNHPqQ/view?usp=sharing"  
+          href="https://drive.google.com/file/d/18L23na3ncRsAwryiO-4K7dRTazGmY7b8/view?usp=sharing"  
           target="_blank" 
           rel="noopener noreferrer" 
           className={profileCSS.DownloadCV}
